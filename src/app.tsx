@@ -3,6 +3,19 @@ import preactLogo from './assets/preact.svg'
 import viteLogo from '/vite.svg'
 import './app.css'
 
+import * as stylex from '@stylexjs/stylex';
+
+const styles = stylex.create({
+  base: {
+    fontSize: 36,
+    lineHeight: 1.5,
+    color: 'rgb(60,60,60)',
+  },
+  highlighted: {
+    color: 'rebeccapurple',
+  },
+});
+
 export function App() {
   const [count, setCount] = useState(0)
 
@@ -26,6 +39,9 @@ export function App() {
         </p>
       </div>
       <p class="read-the-docs">
+        Click on the Vite and Preact logos to learn more
+      </p>
+      <p {...stylex.props(styles.base)}>
         Click on the Vite and Preact logos to learn more
       </p>
     </>
