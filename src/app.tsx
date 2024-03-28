@@ -1,7 +1,7 @@
 import { useState } from 'preact/hooks'
 import preactLogo from './assets/preact.svg'
 import viteLogo from '/vite.svg'
-import './app.css'
+// import './app.css'
 
 import * as stylex from '@stylexjs/stylex';
 import { fonts } from "@stylexjs/open-props/lib/fonts.stylex";
