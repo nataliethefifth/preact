@@ -4,15 +4,19 @@ import viteLogo from '/vite.svg'
 import './app.css'
 
 import * as stylex from '@stylexjs/stylex';
+import { fonts } from "@stylexjs/open-props/lib/fonts.stylex";
+import { colors } from "@stylexjs/open-props/lib/colors.stylex";
 
 const styles = stylex.create({
   base: {
     fontSize: 36,
     lineHeight: 1.5,
     color: 'rgb(60,60,60)',
+    fontFamily: fonts.serif,
   },
   highlighted: {
-    color: 'rebeccapurple',
+    // color: 'rebeccapurple',
+    color: colors.choco9,
   },
 });
 
@@ -41,7 +45,7 @@ export function App() {
       <p class="read-the-docs">
         Click on the Vite and Preact logos to learn more
       </p>
-      <p {...stylex.props(styles.base)}>
+      <p {...stylex.props(styles.base, styles.highlighted)}>
         Click on the Vite and Preact logos to learn more
       </p>
     </>

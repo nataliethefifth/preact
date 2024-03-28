@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.8.2",
+    "@stylexjs/open-props": "^0.5.1",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
     "vite-plugin-stylex": "^0.8.1"
