@@ -6,6 +6,12 @@ import viteLogo from '/vite.svg'
 import * as stylex from '@stylexjs/stylex';
 import { fonts } from "@stylexjs/open-props/lib/fonts.stylex";
 import { colors } from "@stylexjs/open-props/lib/colors.stylex";
+import { autoTheme, lightTheme } from './stylex/theme.stylex';
+// import { light } from './stylex/light.stylex';
+// import { auto } from './stylex/auto.stylex';
+import { color } from './stylex/color.stylex';
+
+// export const autoTheme = stylex.createTheme(color, light);
 
 const styles = stylex.create({
   base: {
@@ -18,6 +24,9 @@ const styles = stylex.create({
     // color: 'rebeccapurple',
     color: colors.choco9,
   },
+  test1: {
+    backgroundColor: color.backgroundColor
+  }
 });
 
 export function App() {
@@ -25,7 +34,9 @@ export function App() {
 
   return (
     <>
-      <div>
+      {/* <div {...stylex.props(autoTheme)}> */}
+      <div {...stylex.props(lightTheme, styles.test1)}>
+      {/* <div {...stylex.props(styles.test1)}> */}
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} class="logo" alt="Vite logo" />
         </a>
